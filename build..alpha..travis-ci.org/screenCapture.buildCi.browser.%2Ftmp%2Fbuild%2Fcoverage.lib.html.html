@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-t/t/t.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-t/node_modules/t/t.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-t">npmtest-t (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-t/t/t.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-t/node_modules/t/t.js</span></h1>
     <h2>
         
         Statements: <span class="metric">11.5% <small>(13 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-t/t/</a> &#187; t.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-t/node_modules/t/</a> » t.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1183,19 +1181,19 @@
 var _dfsPostOrder,
     t = {},
     root = this,
-    isArray = <span class="fstat-no" title="function not covered" >function(o) {</span>
-<span class="cstat-no" title="statement not covered" >        return Object.prototype.toString.call(o) === '[object Array]';</span>
+    isArray = <span class="fstat-no" title="function not covered">function(o) {</span>
+<span class="cstat-no" title="statement not covered">        return Object.prototype.toString.call(o) === '[object Array]';</span>
     },
-    getChildrenName = <span class="fstat-no" title="function not covered" >function (config) {</span>
-<span class="cstat-no" title="statement not covered" >        return config.childrenName || 'children';</span>
+    getChildrenName = <span class="fstat-no" title="function not covered">function (config) {</span>
+<span class="cstat-no" title="statement not covered">        return config.childrenName || 'children';</span>
     };
 &nbsp;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports !== 'undefined') {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports)
+<span class="missing-if-branch" title="else path not taken">E</span>if (typeof exports !== 'undefined') {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports)
         exports = module.exports = t;
     exports.t = t;
 } else {
-<span class="cstat-no" title="statement not covered" >    root.t = t;</span>
+<span class="cstat-no" title="statement not covered">    root.t = t;</span>
 }
 &nbsp;
 &nbsp;
@@ -1224,37 +1222,37 @@ var _dfsPostOrder,
 //
 //  returns: the first `node` argument
 //
-t.bfs = <span class="fstat-no" title="function not covered" >function(node) {</span>
+t.bfs = <span class="fstat-no" title="function not covered">function(node) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var cur, callback, i, length, par, children,</span>
+<span class="cstat-no" title="statement not covered">    var cur, callback, i, length, par, children,</span>
         isConfigSet = arguments.length === 3,
         config = isConfigSet ? arguments[1] : {},
         queue = isArray(node)? node.slice(0) : [node],
         parents = [undefined],
         childrenName = getChildrenName(config);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (node == null) <span class="cstat-no" title="statement not covered" >return node;</span></span>
+<span class="cstat-no" title="statement not covered">    if (node == null) <span class="cstat-no" title="statement not covered">return node;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (arguments.length &gt;= 3) {</span>
-<span class="cstat-no" title="statement not covered" >        config = arguments[1];</span>
-<span class="cstat-no" title="statement not covered" >        callback = arguments[2];</span>
+<span class="cstat-no" title="statement not covered">    if (arguments.length &gt;= 3) {</span>
+<span class="cstat-no" title="statement not covered">        config = arguments[1];</span>
+<span class="cstat-no" title="statement not covered">        callback = arguments[2];</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        config = {};</span>
-<span class="cstat-no" title="statement not covered" >        callback = arguments[1];</span>
+<span class="cstat-no" title="statement not covered">        config = {};</span>
+<span class="cstat-no" title="statement not covered">        callback = arguments[1];</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (queue.length) {</span>
-<span class="cstat-no" title="statement not covered" >        cur = queue.shift();</span>
-<span class="cstat-no" title="statement not covered" >        par = parents.shift();</span>
-<span class="cstat-no" title="statement not covered" >        callback.call(cur, cur, par);</span>
-<span class="cstat-no" title="statement not covered" >        children = cur[childrenName] || [];</span>
-<span class="cstat-no" title="statement not covered" >        for (i = 0, length = children.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            queue.push(children[i]);</span>
-<span class="cstat-no" title="statement not covered" >            parents.push(cur);</span>
+<span class="cstat-no" title="statement not covered">    while (queue.length) {</span>
+<span class="cstat-no" title="statement not covered">        cur = queue.shift();</span>
+<span class="cstat-no" title="statement not covered">        par = parents.shift();</span>
+<span class="cstat-no" title="statement not covered">        callback.call(cur, cur, par);</span>
+<span class="cstat-no" title="statement not covered">        children = cur[childrenName] || [];</span>
+<span class="cstat-no" title="statement not covered">        for (i = 0, length = children.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            queue.push(children[i]);</span>
+<span class="cstat-no" title="statement not covered">            parents.push(cur);</span>
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return node;</span>
+<span class="cstat-no" title="statement not covered">    return node;</span>
 };
 &nbsp;
 // t.dfs()
@@ -1291,43 +1289,43 @@ t.bfs = <span class="fstat-no" title="function not covered" >function(node) {</s
 //
 //  returns: the first `node` argument
 //
-t.dfs = <span class="fstat-no" title="function not covered" >function(node) {</span>
-<span class="cstat-no" title="statement not covered" >    var cur, par, children, ctrl, i, ret,</span>
+t.dfs = <span class="fstat-no" title="function not covered">function(node) {</span>
+<span class="cstat-no" title="statement not covered">    var cur, par, children, ctrl, i, ret,</span>
         isConfigSet = arguments.length === 3,
         nodes = isArray(node)? node.slice(0).reverse() : [node],
         config = isConfigSet ? arguments[1] : {},
         callback = arguments[isConfigSet ? 2 : 1],
         parents = [],
         childrenName = getChildrenName(config);
-<span class="cstat-no" title="statement not covered" >    if (typeof nodes[0] === 'undefined' &amp;&amp; nodes.length === 1) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (typeof nodes[0] === 'undefined' &amp;&amp; nodes.length === 1) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (config.order === 'post') {</span>
-<span class="cstat-no" title="statement not covered" >        ret = _dfsPostOrder(nodes, config, callback);</span>
-<span class="cstat-no" title="statement not covered" >        return isArray(node)? ret : ret[0];</span>
+<span class="cstat-no" title="statement not covered">    if (config.order === 'post') {</span>
+<span class="cstat-no" title="statement not covered">        ret = _dfsPostOrder(nodes, config, callback);</span>
+<span class="cstat-no" title="statement not covered">        return isArray(node)? ret : ret[0];</span>
     }
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (i = nodes.length-1; i &gt;= 0; i--)</span>
-<span class="cstat-no" title="statement not covered" >        parents.push(undefined);</span>
+<span class="cstat-no" title="statement not covered">    for (i = nodes.length-1; i &gt;= 0; i--)</span>
+<span class="cstat-no" title="statement not covered">        parents.push(undefined);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (nodes.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >        cur = nodes.pop();</span>
-<span class="cstat-no" title="statement not covered" >        par = parents.pop();</span>
+<span class="cstat-no" title="statement not covered">    while (nodes.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">        cur = nodes.pop();</span>
+<span class="cstat-no" title="statement not covered">        par = parents.pop();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        ctrl = {};</span>
-<span class="cstat-no" title="statement not covered" >        callback.call(cur, cur, par, ctrl);</span>
+<span class="cstat-no" title="statement not covered">        ctrl = {};</span>
+<span class="cstat-no" title="statement not covered">        callback.call(cur, cur, par, ctrl);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (ctrl.stop) <span class="cstat-no" title="statement not covered" >break;</span></span>
+<span class="cstat-no" title="statement not covered">        if (ctrl.stop) <span class="cstat-no" title="statement not covered">break;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        children = (cur &amp;&amp; cur[childrenName])? cur[childrenName] : [];</span>
+<span class="cstat-no" title="statement not covered">        children = (cur &amp;&amp; cur[childrenName])? cur[childrenName] : [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        for (i = ctrl.cutoff? -1 : children.length-1; i &gt;= 0; i--) {</span>
-<span class="cstat-no" title="statement not covered" >            nodes.push(children[i]);</span>
-<span class="cstat-no" title="statement not covered" >            parents.push(cur);</span>
+<span class="cstat-no" title="statement not covered">        for (i = ctrl.cutoff? -1 : children.length-1; i &gt;= 0; i--) {</span>
+<span class="cstat-no" title="statement not covered">            nodes.push(children[i]);</span>
+<span class="cstat-no" title="statement not covered">            parents.push(cur);</span>
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return node;</span>
+<span class="cstat-no" title="statement not covered">    return node;</span>
 };
 &nbsp;
 // t.map()
@@ -1355,56 +1353,56 @@ t.dfs = <span class="fstat-no" title="function not covered" >function(node) {</s
 //
 //  returns: a new tree, mapped by the callback function
 //
-t.map = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var node = arguments[0],</span>
+t.map = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var node = arguments[0],</span>
         isConfigSet = arguments.length === 3,
         config = isConfigSet ? arguments[1] : {},
         filter = config.filter,
         nodeFactory = arguments[isConfigSet ? 2 : 1],
         ret = isArray(node)? [] : undefined,
-        last = <span class="fstat-no" title="function not covered" >function(l) {</span> <span class="cstat-no" title="statement not covered" >return l[l.length-1]; </span>},
+        last = <span class="fstat-no" title="function not covered">function(l) {</span> <span class="cstat-no" title="statement not covered">return l[l.length-1]; </span>},
         parentStack = [],
         childrenName = getChildrenName(config);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    t.dfs(node, config, <span class="fstat-no" title="function not covered" >function(n, par, ctrl) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var curParent = last(parentStack),</span>
+<span class="cstat-no" title="statement not covered">    t.dfs(node, config, <span class="fstat-no" title="function not covered">function(n, par, ctrl) {</span></span>
+<span class="cstat-no" title="statement not covered">        var curParent = last(parentStack),</span>
             newNode = nodeFactory(n, curParent? curParent.ret : undefined);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (filter &amp;&amp; ! newNode) {</span>
-<span class="cstat-no" title="statement not covered" >            ctrl.cutoff = true;</span>
-<span class="cstat-no" title="statement not covered" >            if (curParent &amp;&amp; n === last(curParent.n[childrenName])) {</span>
-<span class="cstat-no" title="statement not covered" >                parentStack.pop();</span>
-<span class="cstat-no" title="statement not covered" >                if (curParent.ret[childrenName] &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">        if (filter &amp;&amp; ! newNode) {</span>
+<span class="cstat-no" title="statement not covered">            ctrl.cutoff = true;</span>
+<span class="cstat-no" title="statement not covered">            if (curParent &amp;&amp; n === last(curParent.n[childrenName])) {</span>
+<span class="cstat-no" title="statement not covered">                parentStack.pop();</span>
+<span class="cstat-no" title="statement not covered">                if (curParent.ret[childrenName] &amp;&amp;</span>
                         ! curParent.ret[childrenName].length)
-<span class="cstat-no" title="statement not covered" >                    delete curParent.ret[childrenName];</span>
+<span class="cstat-no" title="statement not covered">                    delete curParent.ret[childrenName];</span>
             }
-<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (! par) {</span>
-<span class="cstat-no" title="statement not covered" >            if (isArray(node))</span>
-<span class="cstat-no" title="statement not covered" >                ret.push(newNode);</span>
+<span class="cstat-no" title="statement not covered">        if (! par) {</span>
+<span class="cstat-no" title="statement not covered">            if (isArray(node))</span>
+<span class="cstat-no" title="statement not covered">                ret.push(newNode);</span>
             else
-<span class="cstat-no" title="statement not covered" >                ret = newNode;</span>
+<span class="cstat-no" title="statement not covered">                ret = newNode;</span>
 &nbsp;
         } else {
-<span class="cstat-no" title="statement not covered" >            curParent.ret[childrenName].push(newNode);</span>
+<span class="cstat-no" title="statement not covered">            curParent.ret[childrenName].push(newNode);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (n === last(curParent.n[childrenName])) {</span>
-<span class="cstat-no" title="statement not covered" >                parentStack.pop();</span>
-<span class="cstat-no" title="statement not covered" >                if (curParent.ret[childrenName] &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">            if (n === last(curParent.n[childrenName])) {</span>
+<span class="cstat-no" title="statement not covered">                parentStack.pop();</span>
+<span class="cstat-no" title="statement not covered">                if (curParent.ret[childrenName] &amp;&amp;</span>
                         ! curParent.ret[childrenName].length)
-<span class="cstat-no" title="statement not covered" >                    delete curParent.ret[childrenName];</span>
+<span class="cstat-no" title="statement not covered">                    delete curParent.ret[childrenName];</span>
             }
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (n[childrenName] &amp;&amp; n[childrenName].length) {</span>
-<span class="cstat-no" title="statement not covered" >            newNode[childrenName] = [];</span>
-<span class="cstat-no" title="statement not covered" >            parentStack.push({n: n, ret: newNode});</span>
+<span class="cstat-no" title="statement not covered">        if (n[childrenName] &amp;&amp; n[childrenName].length) {</span>
+<span class="cstat-no" title="statement not covered">            newNode[childrenName] = [];</span>
+<span class="cstat-no" title="statement not covered">            parentStack.push({n: n, ret: newNode});</span>
         }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return ret;</span>
+<span class="cstat-no" title="statement not covered">    return ret;</span>
 };
 &nbsp;
 // t.filter()
@@ -1435,11 +1433,11 @@ t.map = <span class="fstat-no" title="function not covered" >function() {</span>
 //
 // returns: a new tree, filtered by the callback function
 //
-t.filter = <span class="fstat-no" title="function not covered" >function(node) {</span>
-<span class="cstat-no" title="statement not covered" >    var isConfigSet = arguments.length === 3,</span>
+t.filter = <span class="fstat-no" title="function not covered">function(node) {</span>
+<span class="cstat-no" title="statement not covered">    var isConfigSet = arguments.length === 3,</span>
         nodeFactory =  arguments[isConfigSet ? 2 : 1],
         config = isConfigSet ? arguments[1] : {};
-<span class="cstat-no" title="statement not covered" >    return t.map(node, {</span>
+<span class="cstat-no" title="statement not covered">    return t.map(node, {</span>
         filter: true,
         childrenName: config.childrenName
     }, nodeFactory);
@@ -1470,26 +1468,26 @@ t.filter = <span class="fstat-no" title="function not covered" >function(node) {
 //      - `node1`: the node from the first tree
 //      - `node2`: the node from the second tree
 //
-t.stroll = <span class="fstat-no" title="function not covered" >function(tree1, tree2) {</span>
-<span class="cstat-no" title="statement not covered" >    var i, node2,</span>
+t.stroll = <span class="fstat-no" title="function not covered">function(tree1, tree2) {</span>
+<span class="cstat-no" title="statement not covered">    var i, node2,</span>
         isConfigSet = arguments.length === 4,
         callback =  arguments[ isConfigSet ? 3 : 2],
         config = isConfigSet ? arguments[2] : {},
         childrenName = getChildrenName(config),
         nodes2 = isArray(tree2)? tree2.slice(0).reverse() : [tree2],
-        len = <span class="fstat-no" title="function not covered" >function(a) {</span> <span class="cstat-no" title="statement not covered" >return typeof a === 'undefined'? 0 : a.length; </span>};
+        len = <span class="fstat-no" title="function not covered">function(a) {</span> <span class="cstat-no" title="statement not covered">return typeof a === 'undefined'? 0 : a.length; </span>};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    t.dfs(tree1, config, <span class="fstat-no" title="function not covered" >function(node1, par, ctrl) {</span></span>
-<span class="cstat-no" title="statement not covered" >        node2 = nodes2.pop();</span>
+<span class="cstat-no" title="statement not covered">    t.dfs(tree1, config, <span class="fstat-no" title="function not covered">function(node1, par, ctrl) {</span></span>
+<span class="cstat-no" title="statement not covered">        node2 = nodes2.pop();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        callback(node1, node2);</span>
+<span class="cstat-no" title="statement not covered">        callback(node1, node2);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (node1 &amp;&amp; node2 &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">        if (node1 &amp;&amp; node2 &amp;&amp;</span>
                 len(node1[childrenName]) === len(node2[childrenName]))
-<span class="cstat-no" title="statement not covered" >            for (i = (node2[childrenName] || []).length-1; i &gt;= 0; i--)</span>
-<span class="cstat-no" title="statement not covered" >                nodes2.push(node2[childrenName][i]);</span>
+<span class="cstat-no" title="statement not covered">            for (i = (node2[childrenName] || []).length-1; i &gt;= 0; i--)</span>
+<span class="cstat-no" title="statement not covered">                nodes2.push(node2[childrenName][i]);</span>
         else
-<span class="cstat-no" title="statement not covered" >            ctrl.cutoff = true;</span>
+<span class="cstat-no" title="statement not covered">            ctrl.cutoff = true;</span>
 &nbsp;
     });
 };
@@ -1518,28 +1516,28 @@ t.stroll = <span class="fstat-no" title="function not covered" >function(tree1, 
 //
 // returns: the found node
 //
-t.find = <span class="fstat-no" title="function not covered" >function( tree ) {</span>
-<span class="cstat-no" title="statement not covered" >    var found,</span>
+t.find = <span class="fstat-no" title="function not covered">function( tree ) {</span>
+<span class="cstat-no" title="statement not covered">    var found,</span>
         isConfigSet = arguments.length === 3,
         callback =  arguments[ isConfigSet ? 2 : 1],
         config = isConfigSet ? arguments[1] : {};
-<span class="cstat-no" title="statement not covered" >    t.dfs(tree, config, <span class="fstat-no" title="function not covered" >function(node, par, ctrl) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (callback.call(node, node, par)) {</span>
-<span class="cstat-no" title="statement not covered" >            ctrl.stop = true;</span>
-<span class="cstat-no" title="statement not covered" >            found = this;</span>
+<span class="cstat-no" title="statement not covered">    t.dfs(tree, config, <span class="fstat-no" title="function not covered">function(node, par, ctrl) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (callback.call(node, node, par)) {</span>
+<span class="cstat-no" title="statement not covered">            ctrl.stop = true;</span>
+<span class="cstat-no" title="statement not covered">            found = this;</span>
         }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return found;</span>
+<span class="cstat-no" title="statement not covered">    return found;</span>
 };
 &nbsp;
 // _dfsPostOrder()
 // -----------------
 //
 // this is a module-private function used by `dfs()`
-_dfsPostOrder = <span class="fstat-no" title="function not covered" >function(nodes, config, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var cur, par, ctrl, node,</span>
-        last = <span class="fstat-no" title="function not covered" >function(l) {</span> <span class="cstat-no" title="statement not covered" >return l[l.length-1]; </span>},
+_dfsPostOrder = <span class="fstat-no" title="function not covered">function(nodes, config, callback) {</span>
+<span class="cstat-no" title="statement not covered">    var cur, par, ctrl, node,</span>
+        last = <span class="fstat-no" title="function not covered">function(l) {</span> <span class="cstat-no" title="statement not covered">return l[l.length-1]; </span>},
         ret = [],
         stack = [{
             node: nodes.pop(),
@@ -1548,31 +1546,31 @@ _dfsPostOrder = <span class="fstat-no" title="function not covered" >function(no
         }],
         childrenName = getChildrenName(config);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (stack.length) {</span>
-<span class="cstat-no" title="statement not covered" >        cur = last(stack);</span>
-<span class="cstat-no" title="statement not covered" >        node = cur.node;</span>
+<span class="cstat-no" title="statement not covered">    while (stack.length) {</span>
+<span class="cstat-no" title="statement not covered">        cur = last(stack);</span>
+<span class="cstat-no" title="statement not covered">        node = cur.node;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (node[childrenName] &amp;&amp; node[childrenName].length) {</span>
-<span class="cstat-no" title="statement not covered" >            if (cur.index &lt; node[childrenName].length) {</span>
-<span class="cstat-no" title="statement not covered" >                stack.push({</span>
+<span class="cstat-no" title="statement not covered">        if (node[childrenName] &amp;&amp; node[childrenName].length) {</span>
+<span class="cstat-no" title="statement not covered">            if (cur.index &lt; node[childrenName].length) {</span>
+<span class="cstat-no" title="statement not covered">                stack.push({</span>
                     node: node[childrenName][cur.index++],
                     index: 0,
                     ret: []
                 });
-<span class="cstat-no" title="statement not covered" >                continue;</span>
+<span class="cstat-no" title="statement not covered">                continue;</span>
             }
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        ctrl = {};</span>
-<span class="cstat-no" title="statement not covered" >        par = stack[stack.length-2];</span>
-<span class="cstat-no" title="statement not covered" >        if (par) {</span>
-<span class="cstat-no" title="statement not covered" >            par.ret.push(callback.call(node, node, par.node, ctrl, cur.ret));</span>
-<span class="cstat-no" title="statement not covered" >            stack.pop();</span>
+<span class="cstat-no" title="statement not covered">        ctrl = {};</span>
+<span class="cstat-no" title="statement not covered">        par = stack[stack.length-2];</span>
+<span class="cstat-no" title="statement not covered">        if (par) {</span>
+<span class="cstat-no" title="statement not covered">            par.ret.push(callback.call(node, node, par.node, ctrl, cur.ret));</span>
+<span class="cstat-no" title="statement not covered">            stack.pop();</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            ret.push(callback.call(node, node, undefined, ctrl, cur.ret));</span>
-<span class="cstat-no" title="statement not covered" >            stack.pop();</span>
-<span class="cstat-no" title="statement not covered" >            if (nodes.length)</span>
-<span class="cstat-no" title="statement not covered" >                stack.push({</span>
+<span class="cstat-no" title="statement not covered">            ret.push(callback.call(node, node, undefined, ctrl, cur.ret));</span>
+<span class="cstat-no" title="statement not covered">            stack.pop();</span>
+<span class="cstat-no" title="statement not covered">            if (nodes.length)</span>
+<span class="cstat-no" title="statement not covered">                stack.push({</span>
                     node: nodes.pop(),
                     index: 0,
                     ret: []
@@ -1580,16 +1578,17 @@ _dfsPostOrder = <span class="fstat-no" title="function not covered" >function(no
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return ret;</span>
+<span class="cstat-no" title="statement not covered">    return ret;</span>
 };
 &nbsp;
 }());
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 20:15:36 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 21:07:23 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
